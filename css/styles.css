@@ -12,12 +12,12 @@
 
 @font-face {
     font-family: Benton-Black-bold;
-    src: url(/assets/fonts/BentonSans\ Black.otf);
+    src: url(../assets/fonts/BentonSans\ Black.otf);
 }
 
 @font-face {
     font-family: Benton-regular;
-    src: url(/assets/fonts/BentonSans\ Black\ Regular.otf);
+    src: url(../assets/fonts/BentonSans\ Black\ Regular.otf);
 }
 
 a,
