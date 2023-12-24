@@ -24,7 +24,7 @@ btns.forEach(btn => {
             debitCardDetails();
         }
         else if (btn.classList.contains('pass_recover-cancel')) {
-            window.location.href = "/index.html"
+            window.location.href = "../index.html"
         }
         else if (btn.classList.contains('pass_recovery-next2')) {
             confirmOTP();
