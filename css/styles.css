@@ -1,0 +1,807 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    --primary-color_blue: #0033A1;
+    --primary-color-red: #ff0000b0;
+
+}
+
+@font-face {
+    font-family: Benton-Black-bold;
+    src: url(/assets/fonts/BentonSans\ Black.otf);
+}
+
+@font-face {
+    font-family: Benton-regular;
+    src: url(/assets/fonts/BentonSans\ Black\ Regular.otf);
+}
+
+a,
+a:visited,
+a:focus,
+a:active {
+    text-decoration: none;
+    font-family: benton-regular;
+    font-weight: normal;
+    font-size: .8rem;
+    color: var(--primary-color_blue);
+}
+
+img {
+    width: 100%;
+}
+
+.flex-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: .560rem 1rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem 0 .5rem 0;
+    max-width: 100px;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    line-height: 20px;
+    transition: all .5s;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* border: 1px solid blue; */
+}
+
+
+.background-circle {
+    width: 33.4rem;
+    height: 33.4rem;
+    background-color: #0000001d;
+    border-radius: 50%;
+    position: absolute;
+    right: -94px;
+    top: -175px;
+    z-index: -1;
+}
+
+.user_inputs.close_login_page {
+    display: none;
+}
+
+.login-section,
+.pass_recovery-section {
+    overflow: hidden;
+    padding: 8rem 1rem 1rem 1rem;
+}
+
+.user_login,
+.password-recovery {
+    flex: 1;
+
+
+}
+
+.page_title {
+    color: var(--primary-color_blue);
+    transform: translateX(-500px);
+    animation: fadeInLeft 1s forwards;
+}
+
+.page_title,
+.title_pass-recovery {
+    font-family: Benton-regular;
+    /* text-wrap: nowrap; */
+    font-size: 2rem;
+
+    margin: 1.2rem 0;
+}
+
+.title_pass-recovery {
+    align-self: center;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: .02em;
+    color: #1d1d1d;
+    font-size: 40px;
+}
+
+@keyframes fadeInLeft {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.logo {
+    z-index: 5;
+    width: 20%;
+    /*  max-width: 100px; */
+}
+
+.logo.password-recovery {
+    justify-self: center;
+    align-self: center;
+    width: 30%;
+    max-width: 200px;
+}
+
+.user_inputs,
+.user_registration_inputs,
+.input_container {
+    margin: 1rem 0;
+
+}
+
+.input_field,
+.input_field_reg,
+.input_field.p_recovery {
+    border-bottom: 2px solid #0000001d;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    transition: all 100ms;
+
+
+
+}
+
+.input_field:hover,
+.input_field_reg:hover {
+    border-bottom: 2px solid #000000;
+}
+
+.user_password,
+.cardSerialNo {
+    margin-top: 1rem;
+}
+
+.input_field i,
+.input_field_reg i {
+    font-size: 1.2rem;
+}
+
+.input {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    line-height: 2;
+    /* padding: .560rem; */
+    font-size: 1rem;
+
+}
+
+.input::placeholder {
+    opacity: 0;
+}
+
+.user_inputs .user_id,
+.ibanking_ID {
+    margin-bottom: 1rem;
+
+}
+
+.label {
+    color: #000000ab;
+
+}
+
+.label-txt-pwd,
+.label-txt-usrID,
+.label-txt-usrAccount,
+.label-txt-pass-recovery,
+.label-txt-debitCardDetails {
+    font-size: 1.1rem;
+}
+
+.user_id-label,
+.password-label,
+.user_acct-label,
+.ibank_ID_label,
+.ibank_ACNUM_label,
+.debitCard_Pin_label,
+.cardSNo_label {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    transition: all .5s;
+    z-index: -1;
+}
+
+
+
+/* .user_id-label.focus,
+.password-label.focus,
+.ibank_ID_label.focus,
+.debitCard_Pin_label.focus, */
+.label.focus {
+    top: -15px;
+    transform: translate(-.8em) scale(.75);
+}
+
+.user_acct-label.focus,
+.ibank_ACNUM_label.focus,
+.cardSNo_label.focus {
+    top: -15px;
+    transform: translate(-2em) scale(.75);
+}
+
+.input.focus::placeholder {
+    opacity: .3;
+}
+
+.input_field.user_password.first-focus,
+.input_field.user_id.first-focus,
+.input_field_reg.first-focus,
+/* .user_user_id-input.first-focus, */
+.ibanking_ID.first-focus,
+.linked_account.first-focus,
+.stepTwoDetails.first-focus {
+    border-bottom: 2px solid var(--primary-color_blue);
+}
+
+.label-txt-pwd.first_focus-color,
+.label-txt-usrID.first_focus-color,
+.label-txt-usrAccount.first_focus-color,
+.label-txt-pass-recovery.first_focus-color,
+.label-txt-debitCardDetails.first_focus-color {
+    color: var(--primary-color_blue);
+}
+
+.asteric.first_focus-color {
+    color: var(--primary-color-red);
+}
+
+.password_recovery {
+    align-self: flex-end;
+    font-size: .6rem;
+    color: var(--primary-color_blue);
+    margin: .5rem 0;
+    letter-spacing: 1px;
+}
+
+.blue_primary-btn {
+    background-color: var(--primary-color_blue);
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: .560rem 1rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem 0 .5rem 0;
+    max-width: 100px;
+}
+
+
+
+.advertisement {
+    width: 80%;
+    align-self: center;
+    margin-top: 2rem;
+}
+
+/* User Registration */
+
+.back_btn,
+.cancel_btn {
+    border: 1px solid var(--primary-color-red);
+    color: var(--primary-color-red);
+    background-color: #fff;
+    margin-right: .5rem;
+}
+
+.reg_instructions-text,
+.recovery_instructions-text {
+    color: var(--primary-color_blue);
+    margin-bottom: 1.7rem;
+}
+
+.agree_terms-check {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: .5rem;
+    cursor: pointer;
+
+}
+
+.terms_conditions {
+    margin-top: 1.1rem;
+}
+
+.terms_conditions_link {
+    font-family: serif;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.btns.usr_reg {
+    margin-top: 1.5rem;
+
+}
+
+.user_registration_inputs {
+    display: none;
+
+}
+
+/* Terms and Conditions */
+.terms {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000031;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.terms_and_conditions {
+    background-color: #fff;
+    width: 80%;
+    max-width: 800px;
+    height: 80vh;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 1.2rem;
+    transition: all .5s ease-in-out;
+    /* animation: showTerms .5s reverse; */
+}
+
+
+
+/* .terms_and_conditions.show {
+    animation: showTerms .5s forwards;
+
+} */
+
+
+
+@keyframes showTerms {
+    0% {
+        transform: translateY(1000px);
+        opacity: .8;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes closeTerms {
+    0% {
+        transform: translateY(0px);
+        opacity: .8;
+    }
+
+    100% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+}
+
+.article-body::-webkit-scrollbar-button {
+    height: 12px;
+    background-color: red;
+}
+
+.article-body {
+    height: 100vh;
+    overflow: scroll;
+
+}
+
+.article-header {
+    border-bottom: 1px solid #666;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.close-terms {
+    align-self: flex-end;
+    margin: .5rem;
+}
+
+.close_icon {
+    color: #2570e0;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    font-weight: bolder;
+    margin-right: 1rem;
+
+}
+
+.terms-logo {
+    width: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.terms-logo img {
+    width: 100%;
+
+}
+
+.terms-title {
+
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.terms-heading {
+    text-align: center;
+    font-family: HelveticaNeue-Light, robotolight, Arial, sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    line-height: 1.2;
+}
+
+.paragraph {
+    text-align: justify;
+    font-family: HelveticaNeue-Roman, HelveticaNeue, robotoregular, Arial, sans-serif;
+    color: #666;
+    font-size: 0.813rem;
+    line-height: 18px;
+}
+
+.paragraph .heading {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.813rem;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.paragraph+.paragraph {
+    margin: 1rem 0;
+
+}
+
+/* password recovery page */
+.btns.pass_recovery.step3 {
+    align-items: center;
+    justify-content: right;
+    gap: .4rem;
+
+
+}
+
+.blue_resend-btn {
+    border: 1px solid var(--primary-color_blue);
+    color: var(--primary-color_blue);
+    background-color: #fff;
+
+    max-width: 200px;
+}
+
+.OTP_cancel {
+    margin-right: unset;
+}
+
+.password-recovery {
+    /*  border: 1px solid red; */
+}
+
+.pass_recovery_inputs {
+    /*  border: 1px solid blue; */
+}
+
+.step-counter {
+    flex-direction: row;
+    text-align: center;
+    width: 80%;
+    align-self: center;
+}
+
+/* Progress */
+
+.progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    /* border: 1px solid red; */
+    width: 100%;
+
+}
+
+.progress-step.edited {
+    border: 1px solid red;
+    counter-reset: unset;
+
+}
+
+.progress {
+    counter-reset: step;
+
+}
+
+
+
+.progress-step {
+    width: 35px;
+    height: 35px;
+    background-color: #989898;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: #fff;
+
+
+}
+
+.progress-step.active {
+    background-color: var(--primary-color_blue);
+}
+
+
+.step_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    gap: .5rem;
+    transition: all.5s ease-in-out;
+    position: relative;
+    padding: .5rem;
+    border-radius: .3rem;
+
+}
+
+.box1::after,
+.box2::after {
+    content: '';
+    height: 2px;
+    width: 75%;
+    background-color: #989898;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -120px;
+
+}
+
+.box2::after {
+    width: 40%;
+    right: -120px;
+}
+
+.step_box span {
+    transition: all .5s ease-in-out;
+    color: #989898;
+}
+
+.step_box span.active {
+    color: #010101;
+
+}
+
+.step_box.active {
+    background-color: #eaeaea;
+}
+
+.progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+}
+
+/* .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    color: #666;
+    font-size: 0.85rem;
+
+} */
+
+.input_container {
+
+
+    align-self: center;
+}
+
+.warning {
+    visibility: hidden;
+}
+
+.recovery_instructions-text {
+    color: #1d1d1d;
+    text-align: center;
+}
+
+@media screen and (max-width: 399px) {
+    .logo {
+        width: 80%;
+        align-self: center;
+    }
+
+    .page_title {
+        text-wrap: wrap;
+        line-height: normal;
+    }
+
+    .terms_and_conditions {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .flex-content {
+        /*  display: flex; */
+        flex-direction: row;
+    }
+
+
+
+
+    .container {
+        max-width: 80%;
+
+    }
+
+    .background-circle {
+        width: 33.4rem;
+        height: 33.4rem;
+        right: -94px;
+        top: -175px;
+    }
+
+    .login-section {
+        padding: 5rem 0;
+        justify-content: space-between;
+    }
+
+    .user_login {
+        flex-direction: column;
+        padding: .5rem 1rem;
+        flex-shrink: 0;
+        max-width: 450px;
+    }
+
+    .user_registration_inputs {
+        display: none;
+    }
+
+    .user_inputs,
+    .user_registration_inputs,
+    .pass_recovery_inputs {
+        flex-direction: column;
+    }
+
+    .advertisement {
+        width: 45%;
+        align-items: flex-start;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .advertisement img {
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .page_title {
+        text-wrap: nowrap;
+        line-height: normal;
+    }
+
+    .terms {
+
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .terms_and_conditions {
+        /*  display: flex; */
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .article-header {
+        flex-direction: column;
+    }
+
+    /*  forget password */
+    .pass_recovery-section {
+        padding: 3rem 0;
+        transition: all .5s ease;
+    }
+
+    .logo.password-recovery {
+        width: 5rem;
+        align-self: center;
+    }
+
+    .title_pass-recovery {
+        /* border: 1px solid brown; */
+        margin: 0;
+    }
+
+    .step-counter {
+        /* border: 1px solid green; */
+        padding: .5rem;
+        width: 90%;
+    }
+
+    .progressbar {
+        /*  border: 1px dashed red; */
+        margin: 0;
+    }
+
+    .password-recovery {
+        /* border: 1px solid blue; */
+        flex-direction: column;
+    }
+
+    .input_container {
+        flex-direction: column;
+        gap: .5rem;
+        width: 40%;
+        /* border: 1px dashed blue; */
+    }
+
+    .step_one.out {
+        transform: translateX(-1000px);
+    }
+
+    .step_two,
+    .step_three {
+        display: none;
+
+        transform: translateX(1000px);
+        transition: all .5s;
+        animation: transform .5s ease-in-out;
+
+    }
+
+    @keyframes transform {
+        0% {
+            transform: translateX(1000px);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    .step_two.active,
+    .step_three.active {
+        transform: translateX(0px);
+    }
+
+    .step_three {}
+}
