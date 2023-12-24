@@ -33,7 +33,7 @@ btns.forEach(btn => {
             IDDetails();
         }
         else if (btn.classList.contains('OTP_cancel')) {
-            window.location.href = "/index.html"
+            window.location.href = "../index.html"
         }
     })
 })
