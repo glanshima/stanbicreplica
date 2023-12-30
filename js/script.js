@@ -228,7 +228,7 @@ function closeTerms() {
 const LoginBtn = document.querySelector('#acctLogin');
 
 function loginToAccounts() {
-    window.location.href = "../dashboard/accounts.html"
+    window.location.href = "./dashboard/accounts.html"
 }
 
 LoginBtn.addEventListener('click', loginToAccounts);
