@@ -308,6 +308,16 @@ function otpInputBlur() {
         OtpLabel.closest('div > label').style.color = "inherit";
     }
 }
+
+/* const logOut = document.querySelector('#showBVN');
+console.log(logOut) */
+/* function logOutAccount() {
+    window.location.href = "../index.html"
+} */
+/* logOut.addEventListener('click', () => {
+    alert('logged out')
+}) */
+
 /*
 debitSerialNOInput.addEventListener('focus', cardSerialNOinputFocus);
 function cardSerialNOinputFocus() {

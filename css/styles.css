@@ -19,7 +19,27 @@
     font-family: Benton-regular;
     src: url(../assets/fonts/BentonSans\ Black\ Regular.otf);
 }
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
 
+.d-flex-row {
+    display: flex;
+}
+
+.d-flex-col-alt {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.d-flex-row-alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 a,
 a:visited,
 a:focus,

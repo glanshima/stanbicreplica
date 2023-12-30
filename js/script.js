@@ -221,3 +221,25 @@ function closeTerms() {
 
 
 /* Reset Password */
+
+
+/* login to accounts  */
+
+const LoginBtn = document.querySelector('#acctLogin');
+
+function loginToAccounts() {
+    window.location.href = "../dashboard/accounts.html"
+}
+
+LoginBtn.addEventListener('click', loginToAccounts);
+
+/* Log out  */
+
+/* const logOut = document.querySelector('#showBVN');
+console.log(logOut)
+function logOutAccount() {
+    window.location.href = "../index.html"
+}
+logOut.addEventListener('click', () => {
+    alert('logged out')
+}) */
